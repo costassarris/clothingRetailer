@@ -64,6 +64,29 @@ describe('ClothingRetailerController', function() {
       expect(shop.totalPrice).toEqual(55.00);
     });
 
+    it('does not allow user to use £5 voucher twice', function() {
+      shop.addItem(shop.dress);
+      shop.fivePoundVoucher();
+      shop.fivePoundVoucher();
+      expect(shop.totalPrice).toEqual(50.00);
+    });
+
+    it('does not allow user to use £10 voucher twice', function() {
+      shop.addItem(shop.dress);
+      shop.addItem(shop.shoes);
+      shop.tenPoundVoucher();
+      shop.tenPoundVoucher();
+      expect(shop.totalPrice).toEqual(87.00);
+    });
+
+    it('does not allow user to use £15 voucher twice', function() {
+      shop.addItem(shop.dress);
+      shop.addItem(shop.shoes);
+      shop.fifteenPoundVoucher();
+      shop.fifteenPoundVoucher();
+      expect(shop.totalPrice).toEqual(82.00);
+    });
+
   });
 
 

@@ -2,6 +2,9 @@ clothingRetailer.controller('ClothingRetailerController', [function() {
 
   this.basket = [];
   this.totalPrice = 0.00;
+  this.fivePoundVoucherUsed = false;
+  this.tenPoundVoucherUsed = false;
+  this.fifteenPoundVoucherUsed = false;
 
   this.addItem = function(item) {
     this.basket.push(item);
@@ -23,15 +26,18 @@ clothingRetailer.controller('ClothingRetailerController', [function() {
   };
 
   this.fivePoundVoucher = function() {
-    this.totalPrice -= 5;
+    if (this.fivePoundVoucherUsed === false) {this.totalPrice -= 5;}
+    this.fivePoundVoucherUsed = true;
   };
 
   this.tenPoundVoucher = function() {
-    if (this.totalPrice > 50) {this.totalPrice -= 10;}
+    if (this.totalPrice > 50 && this.tenPoundVoucherUsed === false) {this.totalPrice -= 10;}
+    this.tenPoundVoucherUsed = true;
   };
 
   this.fifteenPoundVoucher = function() {
-    if (this.totalPrice > 75 && this.includesFootwear()) {this.totalPrice -= 15;}
+    if (this.totalPrice > 75 && this.includesFootwear() && this.fifteenPoundVoucherUsed === false) {this.totalPrice -= 15;}
+    this.fifteenPoundVoucherUsed = true;
   };
 
   this.includesFootwear = function() {
