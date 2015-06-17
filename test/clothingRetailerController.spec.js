@@ -28,8 +28,29 @@ describe('ClothingRetailerController', function() {
   it ('displays the total price for the products in the shopping basket', function() {
     shop.addItem(shop.shoes);
     shop.addItem(shop.dress);
-    shop.calculateTotal();
     expect(shop.totalPrice).toEqual(97.00);
+  });
+
+  describe('vouchers', function() {
+
+    it('allows user to use £5 voucher', function() {
+      shop.addItem(shop.dress);
+      shop.fivePoundVoucher();
+      expect(shop.totalPrice).toEqual(50.00);
+    });
+
+    it('allows user to use £10 voucher', function() {
+      shop.addItem(shop.dress);
+      shop.tenPoundVoucher();
+      expect(shop.totalPrice).toEqual(45.00);
+    });
+
+    it('does not allow user to use £10 voucher when they spend £50 or less', function() {
+      shop.addItem(shop.shoes);
+      shop.tenPoundVoucher();
+      expect(shop.totalPrice).toEqual(42.00);
+    });
+
   });
 
 
