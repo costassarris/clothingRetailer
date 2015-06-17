@@ -7,6 +7,7 @@ describe('ClothingRetailerController', function() {
     shop = $controller('ClothingRetailerController');
     shop.shoes = { "name" : "Shoes", "price" : 42.00, "available" : 4, "gender" : "women", "category" : "footwear" }
     shop.dress = { "name" : "Dress", "price" : 55.00, "available" : 7, "gender" : "women", "category" : "formal" }
+    shop.jacket = { "name" : "Jacket", "price" : 100.00, "available" : 0, "gender" : "women", "category" : "formal" }
   }));
 
   it ('initialises with an empty shopping basket', function() {
@@ -85,6 +86,15 @@ describe('ClothingRetailerController', function() {
       shop.fifteenPoundVoucher();
       shop.fifteenPoundVoucher();
       expect(shop.totalPrice).toEqual(82.00);
+    });
+
+  });
+
+  describe('stock availability', function() {
+
+    it('user is unable to add out of stock products to shopping basket', function() {
+      shop.addItem(shop.jacket);
+      expect(shop.basket).toEqual([]);
     });
 
   });

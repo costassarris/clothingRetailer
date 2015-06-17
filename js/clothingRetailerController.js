@@ -7,8 +7,10 @@ clothingRetailer.controller('ClothingRetailerController', [function() {
   this.fifteenPoundVoucherUsed = false;
 
   this.addItem = function(item) {
+    if (item.available > 0) {
     this.basket.push(item);
     this.calculateTotal();
+    }
   };
 
   this.removeItem = function(item) {
