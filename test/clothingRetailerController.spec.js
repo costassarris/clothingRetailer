@@ -51,6 +51,19 @@ describe('ClothingRetailerController', function() {
       expect(shop.totalPrice).toEqual(42.00);
     });
 
+    it('allows user to use £15 voucher', function() {
+      shop.addItem(shop.shoes);
+      shop.addItem(shop.shoes);
+      shop.fifteenPoundVoucher();
+      expect(shop.totalPrice).toEqual(69.00);
+    });
+
+    it('does not allow user to use £15 voucher if they do not buy any footwear or spend £75 or less', function() {
+      shop.addItem(shop.dress);
+      shop.fifteenPoundVoucher();
+      expect(shop.totalPrice).toEqual(55.00);
+    });
+
   });
 
 

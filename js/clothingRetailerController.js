@@ -30,4 +30,17 @@ clothingRetailer.controller('ClothingRetailerController', [function() {
     if (this.totalPrice > 50) {this.totalPrice -= 10;}
   };
 
+  this.fifteenPoundVoucher = function() {
+    if (this.totalPrice > 75 && this.includesFootwear()) {this.totalPrice -= 15;}
+  };
+
+  this.includesFootwear = function() {
+    for (var i=0; i<this.basket.length; i++) {
+      var currentItem = this.basket[i];
+      var footwearCount = 0;
+      if (currentItem.category === "footwear") { footwearCount++;}
+    }
+    if (footwearCount>0) {return true;} else {return false;}
+  };
+
 }]);
