@@ -1,31 +1,93 @@
-stock = {
-  "Women" : {
-    "Footwear" : {
-      "Almond Toe Court Shoes, Patent Black" : [99.00, 5],
-      "Suede Shoes, Blue" : [42.00, 4]
-    },
-    "Casual" : {
-      "Gold Button Cardigan, Black" : [167.00, 6],
-      "Cotton Shorts, Medium Red" : [30.00, 5]
-    },
-    "Formal" : {
-      "Bird Print Dress, Black" : [270.00, 10],
-      "Mid Twist Cut-Out Dress, Pink" : [540.00, 5]
-    }
+[
+  {
+    "name" : "Almond Toe Court Shoes, Patent Black",
+    "price" : 99.00,
+    "available" : 5,
+    "gender" : "women",
+    "category" : "footwear"
   },
-  "Men" : {
-    "Footwear" : {
-      "Leather Driver Saddle Loafers, Tan" : [34.00, 12],
-      "Flip Flops, Red" : [19.00, 6],
-      "Flip Flops, Blue" : [19.00, 0]
-    },
-    "Casual" : {
-      "Fine Stripe Short Sleeve Shirt, Grey" : [49.99, 9],
-      "Fine Stripe Short Sleeve Shirt, Green" : [39.99, 3]
-    },
-    "Formal" : {
-      "Sharkskin Waistcoat, Charcoal" : [75.00, 2],
-      "Lightweight Patch Pocket Blazer, Deer" : [175.50, 1]
-    }
+  {
+    "name" : "Suede Shoes, Blue",
+    "price" : 42.00,
+    "available" : 4,
+    "gender" : "women",
+    "category" : "footwear"
   }
-}
+  {
+    "name" : "Gold Button Cardigan, Black",
+    "price" : 167.00,
+    "available" : 6,
+    "gender" : "women",
+    "category" : "casual"
+  },
+  {
+    "name" : "Cotton Shorts, Medium Red",
+    "price" : 30.00,
+    "available" : 5,
+    "gender" : "women",
+    "category" : "casual"
+  },
+  {
+    "name" : "Bird Print Dress, Black",
+    "price" : 270.00,
+    "available" : 10,
+    "gender" : "women",
+    "category" : "formal"
+  },
+  {
+    "name" : "Mid Twist Cut-Out Dress, Pink",
+    "price" : 540.00,
+    "available" : 5,
+    "gender" : "women",
+    "category" : "formal"
+  },
+  {
+    "name" : "Leather Driver Saddle Loafers, Tan",
+    "price" : 34.00,
+    "available" : 12,
+    "gender" : "men",
+    "category" : "footwear"
+  },
+  {
+    "name" : "Flip Flops, Red",
+    "price" : 19.00,
+    "available" : 6,
+    "gender" : "men",
+    "category" : "footwear"
+  },
+  {
+    "name" : "Flip Flops, Blue",
+    "price" : 19.00,
+    "available" : 0,
+    "gender" : "men",
+    "category" : "footwear"
+  },
+  {
+    "name" : "Fine Stripe Short Sleeve Shirt, Grey",
+    "price" : 49.99,
+    "available" : 9,
+    "gender" : "men",
+    "category" : "casual"
+  },
+  {
+    "name" : "Fine Stripe Short Sleeve Shirt, Green",
+    "price" : 39.99,
+    "available" : 3,
+    "gender" : "men",
+    "category" : "casual"
+  },
+  {
+    "name" : "Sharkskin Waistcoat, Charcoal",
+    "price" : 75.00,
+    "available" : 2,
+    "gender" : "men",
+    "category" : "formal"
+  },
+  {
+    "name" : "Lightweight Patch Pocket Blazer, Deer",
+    "price" : 175.50,
+    "available" : 1,
+    "gender" : "men",
+    "category" : "formal"
+  },
+]
