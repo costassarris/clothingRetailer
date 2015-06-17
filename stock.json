@@ -1,0 +1,31 @@
+stock = {
+  "Women" : {
+    "Footwear" : {
+      "Almond Toe Court Shoes, Patent Black" : [99.00, 5],
+      "Suede Shoes, Blue" : [42.00, 4]
+    },
+    "Casual" : {
+      "Gold Button Cardigan, Black" : [167.00, 6],
+      "Cotton Shorts, Medium Red" : [30.00, 5]
+    },
+    "Formal" : {
+      "Bird Print Dress, Black" : [270.00, 10],
+      "Mid Twist Cut-Out Dress, Pink" : [540.00, 5]
+    }
+  },
+  "Men" : {
+    "Footwear" : {
+      "Leather Driver Saddle Loafers, Tan" : [34.00, 12],
+      "Flip Flops, Red" : [19.00, 6],
+      "Flip Flops, Blue" : [19.00, 0]
+    },
+    "Casual" : {
+      "Fine Stripe Short Sleeve Shirt, Grey" : [49.99, 9],
+      "Fine Stripe Short Sleeve Shirt, Green" : [39.99, 3]
+    },
+    "Formal" : {
+      "Sharkskin Waistcoat, Charcoal" : [75.00, 2],
+      "Lightweight Patch Pocket Blazer, Deer" : [175.50, 1]
+    }
+  }
+}

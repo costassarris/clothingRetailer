@@ -1,0 +1,1 @@
+var clothingRetailer = angular.module('ClothingRetailer', ['ngResource']);
