@@ -5,31 +5,35 @@ describe('ClothingRetailerController', function() {
 
   beforeEach(inject(function($controller) {
     shop = $controller('ClothingRetailerController');
-    shop.shoes = { "name" : "Shoes", "price" : 42.00, "available" : 4, "gender" : "women", "category" : "footwear" }
-    shop.dress = { "name" : "Dress", "price" : 55.00, "available" : 7, "gender" : "women", "category" : "formal" }
-    shop.jacket = { "name" : "Jacket", "price" : 100.00, "available" : 0, "gender" : "women", "category" : "formal" }
+    shop.shoes = { "name" : "Shoes", "price" : 42.00, "available" : 4, "gender" : "women", "category" : "Footwear" }
+    shop.dress = { "name" : "Dress", "price" : 55.00, "available" : 7, "gender" : "women", "category" : "Formal" }
+    shop.jacket = { "name" : "Jacket", "price" : 100.00, "available" : 0, "gender" : "women", "category" : "Formal" }
   }));
 
-  it ('initialises with an empty shopping basket', function() {
-    expect(shop.basket).toEqual([])
-  });
+  describe('shopping basket', function() {
 
-  it ('allows user to add an item to the shopping basket', function() {
-    shop.addItem(shop.shoes);
-    expect(shop.basket).toEqual([shop.shoes]);
-  });
+    it ('initialises with an empty shopping basket', function() {
+      expect(shop.basket).toEqual([])
+    });
 
-  it ('allows user to remove item from the shopping basket', function() {
-    shop.addItem(shop.shoes);
-    shop.addItem(shop.dress);
-    shop.removeItem(shop.shoes);
-    expect(shop.basket).toEqual([shop.dress]);
-  });
+    it ('allows user to add an item to the shopping basket', function() {
+      shop.addItem(shop.shoes);
+      expect(shop.basket).toEqual([shop.shoes]);
+    });
 
-  it ('displays the total price for the products in the shopping basket', function() {
-    shop.addItem(shop.shoes);
-    shop.addItem(shop.dress);
-    expect(shop.totalPrice).toEqual(97.00);
+    it ('allows user to remove item from the shopping basket', function() {
+      shop.addItem(shop.shoes);
+      shop.addItem(shop.dress);
+      shop.removeItem(shop.shoes);
+      expect(shop.basket).toEqual([shop.dress]);
+    });
+
+    it ('displays the total price for the products in the shopping basket', function() {
+      shop.addItem(shop.shoes);
+      shop.addItem(shop.dress);
+      expect(shop.totalPrice).toEqual(97.00);
+    });
+
   });
 
   describe('vouchers', function() {

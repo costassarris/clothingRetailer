@@ -12,7 +12,7 @@
     "available" : 4,
     "gender" : "women",
     "category" : "footwear"
-  }
+  },
   {
     "name" : "Gold Button Cardigan, Black",
     "price" : 167.00,
@@ -30,7 +30,7 @@
   {
     "name" : "Bird Print Dress, Black",
     "price" : 270.00,
-    "available" : 10,
+    "availableFo" : 10,
     "gender" : "women",
     "category" : "formal"
   },
@@ -89,5 +89,5 @@
     "available" : 1,
     "gender" : "men",
     "category" : "formal"
-  },
+  }
 ]
