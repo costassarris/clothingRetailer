@@ -7,7 +7,7 @@ A responsive website for a clothing retailer built using AngularJS.
 ##Features
 
 * 6 different categories of clothes that can be filtered using the dropdown menu in the navigation bar at the top.
-* A shopping basket that displays total number of items and price. It can be shown on demand and allows the user to view and edit the contents.
+* A shopping basket that displays total number of items and price. It expands when clicked and allows the user to view and edit the contents.
 * Three different discount vouchers that are conditional and can only be applied once.
 
 ##Setup
