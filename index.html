@@ -52,8 +52,8 @@
 
     <div class="jumbotron" ng-show="basket">
       <ul>
-        <li ng-repeat="item in shop.basket">
-          <b>{{item.name}}</b> {{item.price | currency: '£'}} <span class="glyphicon glyphicon-remove" ng-click="shop.removeItem(item)"></span>
+        <li ng-repeat="item in shop.basket track by $index">
+          <b>{{item.name}}</b> {{item.price | currency: '£'}} <button class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove" ng-click="shop.removeItem(item)"></span></button>
         </li>
       </ul>
     </div>
@@ -117,8 +117,5 @@
   </tr>
     </table>
 
-    <div ng-view></div>
-
   </body>
-
 </html>

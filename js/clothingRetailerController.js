@@ -46,9 +46,9 @@ clothingRetailer.controller('ClothingRetailerController', [function() {
   };
 
   this.includesFootwear = function() {
+    var footwearCount = 0;
     for (var i=0; i<this.basket.length; i++) {
       var currentItem = this.basket[i];
-      var footwearCount = 0;
       if (currentItem.category === "Footwear") { footwearCount++;}
     }
     if (footwearCount>0) {return true;} else {return false;}
